@@ -50,7 +50,7 @@ const { titolo, regista, anno, valutazione } = film;
 
 console.log(titolo, anno);
 
-// esercizio 6: Utilizza la distrutturazione degli oggetti per estrarre il `nome` e l'`eta` dall'oggetto `persona`. Se l'`eta` non è fornita, dovrebbe avere un valore predefinito di `30`.
+// esercizio 5: Utilizza la distrutturazione degli oggetti per estrarre il `nome` e l'`eta` dall'oggetto `persona`. Se l'`eta` non è fornita, dovrebbe avere un valore predefinito di `30`.
 
 const persona = {
   nomea: "Bob",
@@ -60,3 +60,16 @@ const etaDefault = 30;
 const { nomea, eta = etaDefault } = persona;
 
 console.log(nomea, eta);
+
+//esercizio 6
+//Scrivi una funzione `presentati` che prende un oggetto con le proprietà `nome` e `occupazione` e registra un messaggio nella console.
+const presentati = (persona) => {
+  const { nome, occupazione } = persona;
+  return console.log({ nome, occupazione });
+};
+
+const mascotte = {
+  nome: "pikachu",
+  occupazione: "pensionato",
+};
+presentati(mascotte);
